@@ -104,7 +104,9 @@ header {
                 margin: 0 1em;
                 height: 100%;
                 line-height: 94px;
-                &.active {
+
+                // &:hover,
+                &.active{
                         color: $activeMenu;
                         border-bottom: 1px solid $activeMenu;
                         border-bottom-width: 10px;
