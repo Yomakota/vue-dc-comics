@@ -1,37 +1,44 @@
 <template>
-    <div class="container">
-        <div class="col-left">
-            
-            <ul>
-                <li v-for="element, index in dc_comics_list_links " :key="index">
-                    <a href="">
-                        {{ element.text }}
-                    </a>
-                </li>
-            </ul>
-            <ul>
-                <li v-for="element, index in shop_list_links" :key="index">
-                    <a href="">
-                        {{ element.text }}
-                    </a>
-                </li>
-            </ul>
-            <ul>
-                <li v-for="element, index in dc_list_links" :key="index">
-                    <a href="">
-                        {{ element.text }}
-                    </a>
-                </li>
-            </ul>
-            <ul>
-                <li v-for="element, index in sites_list_links" :key="index">
-                    <a href="">
-                        {{ element.text }}
-                    </a>
-                </li>
-            </ul>
+    <footer>
+        <div class="container">
+            <div class="col-left">
+                <ul>
+                    <li v-for="element, index in dc_comics_list_links " :key="index">
+                        <a href="">
+                            {{ element.text }}
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li v-for="element, index in shop_list_links" :key="index">
+                        <a href="">
+                            {{ element.text }}
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li v-for="element, index in dc_list_links" :key="index">
+                        <a href="">
+                            {{ element.text }}
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li v-for="element, index in sites_list_links" :key="index">
+                        <a href="">
+                            {{ element.text }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div class="col-right">
+                    <img src="../assets/img/dc-logo-bg.png" alt="">
+                </div>
+            </div>
         </div>
-    </div>
+
+    </footer>
 </template>
 
 <script>
@@ -150,22 +157,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .container{
-        background-image: url('../assets/img/footer-bg.jpg');
+footer {
+    background-image: url('../assets/img/footer-bg.jpg');
+    font-size: 10px;
+    height: 500px;
+    .container {
         display: flex;
-
+        justify-content: space-between;
         .col-left {
             display: flex;
-        }
 
-        li {
-            display: flex;
+            li {
+                display: flex;
 
-            a{
-                text-decoration: none;
-                color: white;
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
             }
         }
-
     }
+}
 </style>
