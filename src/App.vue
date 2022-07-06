@@ -7,7 +7,9 @@
       <MainContent/>
       <MainMenu/>
     </Main>
-    <Footer/>
+    <Footer>
+      <FooterLinks/>
+    </Footer>
   </div>
 </template>
 
@@ -16,6 +18,7 @@
 import HeaderPage from './components/HeaderPage.vue'
 import MainContent from './components/MainContent.vue'
 import MainMenu from './components/MainMenu.vue'
+import FooterLinks from './components/FooterLinks.vue'
 
 export default {
   name: 'App',
@@ -24,6 +27,7 @@ export default {
     HeaderPage,
     MainContent,
     MainMenu,
+    FooterLinks,
   }
 }
 </script>
