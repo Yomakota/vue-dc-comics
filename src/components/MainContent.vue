@@ -1,23 +1,29 @@
 <template>
-    <div class="container">
-        <span>content go here</span>
-    </div>
+    <main>
+        <div class="container">
+            <span>content go here</span>
+        </div>
+    </main>
 </template>
 
 <script>
 export default {
     name: 'MainContent',
-    data(){
-        return{
-
-        }
+    data() {
+        return {}
     }
 }
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/style/variables.scss";
+main {
+    background-color: $mainContent;
     .container {
-        background-color: black;
+        display: flex;
+        align-items: center;
         color: white;
+        padding: 3em;
     }
+}
 </style>

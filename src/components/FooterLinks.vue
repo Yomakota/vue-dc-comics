@@ -2,39 +2,47 @@
     <footer>
         <div class="container">
             <div class="col-left">
-                <ul>
-                    <li v-for="element, index in dc_comics_list_links " :key="index">
-                        <a href="">
-                            {{ element.text }}
-                        </a>
-                    </li>
-                </ul>
-                <ul>
-                    <li v-for="element, index in shop_list_links" :key="index">
-                        <a href="">
-                            {{ element.text }}
-                        </a>
-                    </li>
-                </ul>
-                <ul>
-                    <li v-for="element, index in dc_list_links" :key="index">
-                        <a href="">
-                            {{ element.text }}
-                        </a>
-                    </li>
-                </ul>
-                <ul>
-                    <li v-for="element, index in sites_list_links" :key="index">
-                        <a href="">
-                            {{ element.text }}
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <div class="col-right">
-                    <img src="../assets/img/dc-logo-bg.png" alt="">
+                <div class="col-1">
+                    <ul>
+                        <span>Dc comics</span>
+                        <li v-for="element, index in dc_comics_list_links " :key="index">
+                            <a href="">
+                                {{ element.text }}
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <span>Shop</span>
+                        <li v-for="element, index in shop_list_links" :key="index">
+                            <a href="">
+                                {{ element.text }}
+                            </a>
+                        </li>
+                    </ul>
                 </div>
+                <div class="col-2">
+                    <ul>
+                        <span>DC</span>
+                        <li v-for="element, index in dc_list_links" :key="index">
+                            <a href="">
+                                {{ element.text }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <ul>
+                        <span>Sites</span>
+                        <li v-for="element, index in sites_list_links" :key="index">
+                            <a href="">
+                                {{ element.text }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-right">
+                <img src="../assets/img/dc-logo-bg.png" alt="">
             </div>
         </div>
 
@@ -157,23 +165,46 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/style/variables.scss";
 footer {
+    display: flex;
     background-image: url('../assets/img/footer-bg.jpg');
+    background-size: cover;
     font-size: 10px;
-    height: 500px;
+
     .container {
         display: flex;
-        justify-content: space-between;
         .col-left {
             display: flex;
 
-            li {
+            ul {
                 display: flex;
-
-                a {
-                    text-decoration: none;
+                flex-direction: column;
+                padding: 2em;
+                span{
                     color: white;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    padding-bottom: 10px;
                 }
+                li {
+                    display: flex;
+                    padding-bottom: 5px;
+                    a {
+                        text-decoration: none;
+                        color: $footerLink;
+                    }
+                }
+            }
+        }
+
+        .col-right {
+            position: absolute;
+            top: 38%;
+            right: 13%;
+            width: 25%;
+            img{
+                width: 100%;
             }
         }
     }

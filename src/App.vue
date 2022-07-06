@@ -3,13 +3,14 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <HeaderPage/>
-    <Main>
+    <main>
       <MainContent/>
       <MainMenu/>
-    </Main>
-    <Footer>
+    </main>
+    <footer>
       <FooterLinks/>
-    </Footer>
+      <FooterBottom/>
+    </footer>
   </div>
 </template>
 
@@ -19,6 +20,8 @@ import HeaderPage from './components/HeaderPage.vue'
 import MainContent from './components/MainContent.vue'
 import MainMenu from './components/MainMenu.vue'
 import FooterLinks from './components/FooterLinks.vue'
+import FooterBottom from './components/FooterBottom.vue'
+
 
 export default {
   name: 'App',
@@ -28,12 +31,11 @@ export default {
     MainContent,
     MainMenu,
     FooterLinks,
+    FooterBottom
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-}
+@import "./assets/style/commons.scss";
 </style>
