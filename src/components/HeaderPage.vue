@@ -20,44 +20,43 @@ export default {
         return {
             links: [
                 {
-                    name: "Characters",
-                    url: "#",
+                    name: 'Characters',
+                    url: '#',
                 },
                 {
-                    name: "Comics",
-                    url: "#",
+                    name: 'Comics',
+                    url: '#',
                 },
                 {
-                    name: "Movies",
-                    url: "#",
+                    name: 'Movies',
+                    url: '#',
                 },
                 {
-                    name: "TV",
-                    url: "#",
+                    name: 'TV',               url: '#',
                 },
                 {
-                    name: "Games",
-                    url: "#",
+                    name: 'Game',
+                    url: '#',
                 },
                 {
-                    name: "Collectibles",
-                    url: "#",
+                    name: 'Collectibles',
+                    url: '#',
                 },
                 {
-                    name: "Videos",
-                    url: "#",
+                    name: 'Videos',
+                    url: '#',
                 },
                 {
-                    name: "Fans",
-                    url: "#",
+                    name: 'Fans',
+                    url: '#',
                 },
                 {
-                    name: "News",
-                    url: "#",
+                    name: 'News',
+                    url: '#',
                 },
                 {
-                    name: "Shop",
-                    url: "#",
+                    name: 'Shop',
+                    url: '#',
                 },
             ],
         }
@@ -75,7 +74,6 @@ header {
 
         img {
             width: 100px;
-            height: 100px;
         }
 
         ul {
@@ -84,7 +82,7 @@ header {
             li {
                 display: flex;
                 text-transform: uppercase;
-                margin: 0 1em 0 1em;
+                margin: 0 1em;
 
                 a {
                     text-decoration: none;

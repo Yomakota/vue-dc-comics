@@ -5,6 +5,7 @@
     <HeaderPage/>
     <Main>
       <MainContent/>
+      <MainMenu/>
     </Main>
     <Footer/>
   </div>
@@ -14,6 +15,7 @@
 // import HelloWorld from './components/HelloWorld.vue'
 import HeaderPage from './components/HeaderPage.vue'
 import MainContent from './components/MainContent.vue'
+import MainMenu from './components/MainMenu.vue'
 
 export default {
   name: 'App',
@@ -21,6 +23,7 @@ export default {
     // HelloWorld
     HeaderPage,
     MainContent,
+    MainMenu,
   }
 }
 </script>
