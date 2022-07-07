@@ -3,7 +3,7 @@
         <div class="container">
             <img src="../assets/img/dc-logo.png" alt="">
             <ul>
-                <li v-for="link, index in links" :key="index" :class="{ 'active': link.active }">
+                <li @click="setActive(index)" v-for="link, index in links" :key="index" :class="{ 'active': index === activeElement }">
                     <a :href="link.url">
                         {{ link.name }}
                     </a>
@@ -18,7 +18,7 @@ export default {
     name: 'HeaderPage',
     data() {
         return {
-            activeElement: null,
+            activeElement: 0,
             links: [
                 {
                     name: 'Characters',
@@ -73,6 +73,11 @@ export default {
             ],
         }
     },
+    methods:{
+        setActive(index){
+            this.activeElement = index
+        }
+    }
 }
 </script>
 
@@ -104,8 +109,6 @@ export default {
                 margin: 0 1em;
                 height: 100px;
                 line-height: 100px;
-
-                &:hover,
                 &.active {
                 border-bottom: 1px solid $activeMenu;
                 border-bottom-width: 10px;
