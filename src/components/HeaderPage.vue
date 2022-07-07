@@ -3,7 +3,11 @@
         <div class="container">
             <img src="../assets/img/dc-logo.png" alt="">
             <ul>
-                <li @click="setActive(index)" v-for="link, index in links" :key="index" :class="{ 'active': index === activeElement }">
+                <li @click="setActive(index)" 
+                    v-for="link, index in links" 
+                    :key="index" 
+                    :class="{ 'active': index === activeElement }"
+                >
                     <a :href="link.url">
                         {{ link.name }}
                     </a>
