@@ -1,13 +1,15 @@
 <template>
-    <main>
+    <section class="comics-thumbs">
         <div class="container">
-            <ThumbComic  v-for="element, index in thumbs" :key="index" :thumbInfo="element"/>
-         </div>
-    </main>
+            <div class="current-series">Current series</div>
+            <ThumbComic v-for="element, index in thumbs" :key="index" :thumbInfo="element" />
+            <div><button class="load-more">load more</button></div>
+        </div>
+    </section>
 </template>
 
 <script>
-import thumbsJson from '../assets/dc-comics.json';
+import thumbsJson from '../assets/thumbJson/dc-comics.json';
 import ThumbComic from './ThumbComic.vue';
 
 export default {
@@ -97,13 +99,41 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/style/variables.scss";
-main {
+.comics-thumbs {
+    position: relative;
     background-color: $mainContent;
+    color: white;
     .container {
         display: flex;
-        align-items: center;
         flex-wrap: wrap;
-        padding: 1em;
+        height: 600px;
+        padding: 2em;
+        .current-series {
+            position: absolute;
+            top: -4%;
+            left: 15%;
+            font-size: 20px;
+            font-weight: bold;
+            padding: .5em;
+            background-color: $mainMenu;
+            text-transform: uppercase;
+        }
+        .load-more {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translate(-50%);
+            width: 200px;
+            text-align: center;
+            background-color: $mainMenu;
+            border: none;
+            color: inherit;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 800;
+            padding: .5em;
+        }
     }
 }
 </style>

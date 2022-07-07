@@ -1,5 +1,5 @@
 <template>
-    <footer>
+    <section class="footer-bottom">
         <div class="container">
             <div class="col-left">
                 <button>
@@ -9,9 +9,9 @@
                 </button>
             </div>
             <div class="col-right">
-                <span>
+                <h3>
                     Follow Us
-                </span>
+                </h3>
                 <ul>
                     <li v-for="social, index in socials" :key="index">
                         <a :href="social.url">
@@ -38,7 +38,7 @@
                  </ul> -->
             </div>
         </div>
-    </footer>
+   </section>
 </template>
 
 <script>
@@ -80,7 +80,7 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/style/variables.scss";
 
-footer{
+.footer-bottom{
     background-color: $footerBottom;
     .container {
         display: flex;
@@ -102,7 +102,7 @@ footer{
             display: flex;
             justify-content: space-around;
             align-items: center;
-            span{
+            h3{
                 color: $bottomLink;
             }
             ul{

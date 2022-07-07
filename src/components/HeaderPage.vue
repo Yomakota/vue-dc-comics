@@ -1,12 +1,9 @@
 <template>
-    <header>
+    <header class="header">
         <div class="container">
             <img src="../assets/img/dc-logo.png" alt="">
             <ul>
-                <li v-for="link, index in links" 
-                    :key="index" 
-                    :class="{'active': link.active}"
-                >
+                <li v-for="link, index in links" :key="index" :class="{ 'active': link.active }">
                     <a :href="link.url">
                         {{ link.name }}
                     </a>
@@ -26,12 +23,12 @@ export default {
                 {
                     name: 'Characters',
                     url: '#',
-                    active:false,
+                    active: false,
                 },
                 {
                     name: 'Comics',
                     url: '#',
-                    active: true,
+                    active: false,
                 },
                 {
                     name: 'Movies',
@@ -39,7 +36,7 @@ export default {
                     active: false,
                 },
                 {
-                    name: 'TV', 
+                    name: 'TV',
                     url: '#',
                     active: false,
                 },
@@ -81,9 +78,12 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/style/variables.scss";
-header {
+
+.header {
     background-color: white;
     width: 100%;
+    height: 100px;
+
     .container {
         display: flex;
         justify-content: space-between;
@@ -102,16 +102,18 @@ header {
                 text-transform: uppercase;
                 font-size: .7em;
                 margin: 0 1em;
-                height: 100%;
-                line-height: 94px;
+                height: 100px;
+                line-height: 100px;
 
-                // &:hover,
-                &.active{
-                        color: $activeMenu;
-                        border-bottom: 1px solid $activeMenu;
-                        border-bottom-width: 10px;
-                    }
-
+                &:hover,
+                &.active {
+                border-bottom: 1px solid $activeMenu;
+                border-bottom-width: 10px;
+                a {
+                color: $activeMenu;
+                }
+                }
+                
                 a {
                     text-decoration: none;
                     color: black;

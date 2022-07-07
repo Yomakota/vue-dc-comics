@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <section class="main-icon-links">
         <div class="container">
             <ul>
                 <li v-for="link, index in links" :key="index">
@@ -8,7 +8,7 @@
                             <img :src="link.image" :alt="link.text">
                         </div>
                         <div class="text-link">
-                            {{link.text}}
+                            {{ link.text }}
                         </div>
                     </a>
                 </li>
@@ -66,7 +66,7 @@
                 </li>
             </ul> -->
         </div>
-    </main>
+    </section>
 </template>
 
 <script>
@@ -109,8 +109,9 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/style/variables.scss";
 
-main {
+.main-icon-links {
     background-color: $mainMenu;
+
     .container {
         padding: 2em;
 
@@ -133,6 +134,7 @@ main {
                     padding: .5em;
                     font-size: .5em;
                 }
+
                 .image-link {
                     width: 40px;
                 }
