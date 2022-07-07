@@ -51,7 +51,7 @@
 
 <script>
 export default {
-    name: 'FooterLinks',
+    name: 'FooterTop',
     data() {
         return {
             dc_comics_list_links: [

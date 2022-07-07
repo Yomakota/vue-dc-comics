@@ -2,7 +2,7 @@
     <section class="comics-thumbs">
         <div class="container">
             <div class="current-series">Current series</div>
-            <ThumbComic v-for="element, index in thumbs" :key="index" :thumbInfo="element" />
+            <ThumbComic v-for="element, index in thumbs" :key="index" :thumbInfo="element"/>
             <div><button class="load-more">load more</button></div>
         </div>
     </section>

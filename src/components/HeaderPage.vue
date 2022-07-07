@@ -1,18 +1,22 @@
 <template>
     <header class="header">
         <div class="container">
-            <img src="../assets/img/dc-logo.png" alt="">
-            <ul>
-                <li @click="setActive(index)" 
-                    v-for="link, index in links" 
-                    :key="index" 
-                    :class="{ 'active': index === activeElement }"
-                >
-                    <a :href="link.url">
-                        {{ link.name }}
-                    </a>
-                </li>
-            </ul>
+            <div class="logo">
+                <img src="../assets/img/dc-logo.png" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li @click="setActive(index)" 
+                        v-for="link, index in links" 
+                        :key="index"
+                        :class="{ 'active': index === activeElement }"
+                    >
+                        <a :href="link.url">
+                            {{ link.name }}
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
 </template>
@@ -115,10 +119,10 @@ export default {
                 line-height: 100px;
                 &.active {
                 border-bottom: 1px solid $activeMenu;
-                border-bottom-width: 10px;
-                a {
-                color: $activeMenu;
-                }
+                border-bottom-width: 3px;
+                    a {
+                        color: $activeMenu;
+                    }
                 }
                 
                 a {
