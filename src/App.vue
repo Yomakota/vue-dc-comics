@@ -26,7 +26,6 @@ import FooterLinks from './components/FooterLinks.vue'
 import FooterBottom from './components/FooterBottom.vue'
 import JumbotronComic from './components/JumbotronComic.vue'
 
-
 export default {
   name: 'App',
   components: {
