@@ -111,8 +111,6 @@ export default {
 
 main {
     background-color: $mainMenu;
-    position: relative;
-    z-index: 2;
     .container {
         padding: 2em;
 
@@ -135,7 +133,6 @@ main {
                     padding: .5em;
                     font-size: .5em;
                 }
-
                 .image-link {
                     width: 40px;
                 }

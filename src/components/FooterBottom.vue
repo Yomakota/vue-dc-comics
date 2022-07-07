@@ -82,7 +82,6 @@ export default {
 
 footer{
     background-color: $footerBottom;
-    position: relative;
     .container {
         display: flex;
         justify-content: space-around;

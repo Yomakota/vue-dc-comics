@@ -3,6 +3,9 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <HeaderPage/>
+    <section>
+      <JumbotronComic/>
+    </section>
     <main>
       <MainContent/>
       <MainMenu/>
@@ -21,6 +24,7 @@ import MainContent from './components/MainContent.vue'
 import MainMenu from './components/MainMenu.vue'
 import FooterLinks from './components/FooterLinks.vue'
 import FooterBottom from './components/FooterBottom.vue'
+import JumbotronComic from './components/JumbotronComic.vue'
 
 
 export default {
@@ -31,7 +35,8 @@ export default {
     MainContent,
     MainMenu,
     FooterLinks,
-    FooterBottom
+    FooterBottom,
+    JumbotronComic,
   }
 }
 </script>

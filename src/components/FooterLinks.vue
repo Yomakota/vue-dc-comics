@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="col-right">
-                <img src="../assets/img/dc-logo-bg.png" alt="">
+               
             </div>
         </div>
 
@@ -174,6 +174,7 @@ footer {
 
     .container {
         display: flex;
+        justify-content: space-between;
         .col-left {
             display: flex;
 
@@ -199,14 +200,11 @@ footer {
         }
 
         .col-right {
-            position: absolute;
-            top: 38%;
-            right: 13%;
-            width: 25%;
-            img{
-                width: 100%;
-            }
-        }
+            background-image: url(../assets/img/dc-logo-bg.png);
+            background-size: cover;
+            background-position: center;
+            width: 40%;
+        }   
     }
 }
 </style>
